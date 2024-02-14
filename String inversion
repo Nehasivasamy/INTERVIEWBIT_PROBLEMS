@@ -1,0 +1,15 @@
+public class Solution {
+    public String solve(String A) {
+        char[] aa = A.toCharArray();
+
+        for (int i = 0; i < aa.length; i++) {
+            if (Character.isUpperCase(aa[i])) {
+                aa[i] = Character.toLowerCase(aa[i]);
+            } else if (Character.isLowerCase(aa[i])) {
+                aa[i] = Character.toUpperCase(aa[i]);
+            }
+        }
+        
+        return new String(aa);
+    }
+}
