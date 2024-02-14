@@ -1,0 +1,19 @@
+public class Solution {
+    public int[] solve(int[] A) {
+        Scanner sc = new Scanner(System.in);
+        int p = 0;
+        int n =0;
+        int[] arr =  new int[2];
+        for(int i = 0 ;i<A.length;i++){
+            if(A[i]>0){
+                p++;
+            }
+            if(A[i]<0){
+                n++;
+            }
+        }
+        arr[0]=p;
+        arr[1]=n;
+        return arr;
+    }
+}
