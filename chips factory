@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+
+public class Solution {
+    public int[] solve(int[] A) {
+        int count = 0;
+        ArrayList<Integer> aa = new ArrayList<>();
+
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] != 0) {
+                aa.add(A[i]);
+                count++;
+            }
+        }
+
+        int n = A.length - count;
+        for (int i = 0; i < n; i++) {
+            aa.add(0);
+        }
+
+        int[] resultArray = new int[aa.size()];
+        for (int i = 0; i < aa.size(); i++) {
+            resultArray[i] = aa.get(i);
+        }
+
+        return resultArray;
+    }
+}
