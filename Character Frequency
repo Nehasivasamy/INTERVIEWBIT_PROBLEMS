@@ -1,0 +1,25 @@
+public class Solution {
+    public int[] solve(String A) {
+        HashMap<Character,Integer> hmap=new HashMap<>();
+        for(int i=0;i<A.length();i++){
+            //hmap.put(A.charAt(i),hmap.getOrDefault(A.charAt(i),0)+1);
+            if(!hmap.containsKey(A.charAt(i))){
+                hmap.put(A.charAt(i),1);
+            }else{
+                hmap.put(A.charAt(i),hmap.get(A.charAt(i))+1);
+            }
+        }
+        ArrayList<Integer> alist=new ArrayList<>();
+        for(int i=0;i<A.length();i++){
+            if(hmap.containsKey(A.charAt(i))){
+                alist.add(hmap.get(A.charAt(i)));
+                hmap.remove(A.charAt(i));
+            }
+        }
+        int arr[]=new int[alist.size()];
+        for(int i=0;i<alist.size();i++){
+            arr[i]=alist.get(i);
+        }
+        return arr;
+    }
+}
